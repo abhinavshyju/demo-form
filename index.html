@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Demo form</title>
+</head>
+<body>
+    <div style="position: absolute; left: 0px; top: 0px; overflow: hidden; width: 100%; height: 100%;">
+        <canvas id="car" width="1366" height="699"></canvas>
+    </div>
+        <div class="center">
+            <h1 class="register">Register</h1>
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeMUCVVhBj0RkfWqJmQAx0UdRj42A3xhouK8KUazLOD0oO0qg/formResponse">
+                <div class="txt_field">
+                    <input type="text" required name="entry.1102295709=999-name">
+                    <span></span>
+                    <label>Name</label>
+                  </div>
+                  <div class="txt_field">
+                    <input type="text" required name="entry.2099131818=999-email">
+                    <span></span>
+                    <label>Email</label>
+                  </div>
+                  <input type="submit" value="Submit">
+            </form>
+            <br>
+        </div>
+     <!-- <nodes.js embedding> -->
+        <script type="text/javascript" src="nodes.js"></script>
+        <script type="text/javascript">
+            var nodesjs = new NodesJs({
+                id: 'car',
+                width: window.innerWidth,
+                height: window.innerHeight,
+                particleSize: 2,
+                lineSize: 1,
+                particleColor: [255, 255, 255, 0.3],
+                lineColor: [255, 255, 255],
+                backgroundFrom: [0, 0, 0],
+                backgroundTo: [0, 0, 0],
+                backgroundDuration: 4000,
+                nobg: false,
+                number: window.hasOwnProperty('orientation') ? 30: 100,
+                speed: 20
+            });
+        </script>
+</body>
+</html>
